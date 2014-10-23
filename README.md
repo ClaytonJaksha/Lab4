@@ -224,7 +224,7 @@ At some point, it goes so fast that one can hardly react, for this reason we hav
 
 ## Debugging
 
-
+Debugging was primarily done by looking at the Nokia 1202 display and the stored register and expression values within CCS-6.0's debugging feature.
 
 ## Testing Methodology/Results
 
