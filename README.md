@@ -23,6 +23,7 @@ I designed this code by continuously checking the ball structure's position agai
 
 ## Code Walkthrough
 We need to first include our microprocessor's library and the header file `pong.h` in order to include the functions we will reference in the `main()` loop. Also, we will declare and define the global variables `m`,`i`,`j` since they are used in all parts of the code.
+#### Pong
 ```
 #include <msp430g2553.h>
 #include "pong.h"
@@ -32,7 +33,7 @@ unsigned long i = 0;
 unsigned char j = 0;
 ```
 
-
+This is the beginning of the `main()` loop, where the Pong program will run from. We initialize our ball (well, really, it's a block) structure in the middle of the screen with a predefined velocity. Also we initialize our paddle with random values (they will be overwritten as the program further initializes). We also define some counters, stop the watchdog timer, and we're good to go!
 ```
 void main() {
     ball_t myBall={{SCREEN_WIDTH/2,SCREEN_HEIGHT/2},{INIT_VELOC_X,INIT_VELOC_Y},0}; //initialize the ball's position in the middle of the screen with a velocity of (8,5)
@@ -41,6 +42,7 @@ void main() {
     IFG1=0; /* clear interrupt flag1 */
     WDTCTL=WDTPW+WDTHOLD; /* stop WD */
 ```
+This portion of the code calls some of the assembly funcitons defined in `nokia.asm` to initalize the display, clear the display, and then it draws our block in the middle of the screen and actually initializes our paddle on the far left of the screen.
 ```
     init();
     initNokia();
