@@ -24,6 +24,7 @@ I designed this code by continuously checking the ball structure's position agai
 ## Code Walkthrough
 We need to first include our microprocessor's library and the header file `pong.h` in order to include the functions we will reference in the `main()` loop. Also, we will declare and define the global variables `m`,`i`,`j` since they are used in all parts of the code.
 #### Etch-A-Sketch
+This first portion calls the MSP430 library and declares the functions found in `nokia_basic.asm`. Then it goes on to declare constants that wil be useful throughout the code.
 ```
 #include <msp430g2553.h>
 
@@ -41,25 +42,32 @@ extern void drawBlock(unsigned char row, unsigned char col);
 #define		RIGHT_BUTTON	(P2IN & BIT1)
 #define		BLACK			1
 #define		WHITE			0
-
+```
+We begin the main loop here by defining some variables for the cursor and the color (black or clear) of the block we are drawing.
+```
 void main() {
 
 	unsigned char	x, y, button_press;
 	unsigned char   color=1;
-
+```
+Then, we initialize the MSP430 some more my stopping the watchdog timer and ensuring the button is unpressed at the beginning.
+```
 	// === Initialize system ================================================
 	IFG1=0; /* clear interrupt flag1 */
 	WDTCTL=WDTPW+WDTHOLD; /* stop WD */
 	button_press = FALSE;
-
-
+```
+We then initialize the Nokia display, clear it, and call our two block drawing functions at x=4, y=4 before entering the infinite loop.
+```
 	init();
 	initNokia();
 	clearDisplay();
 	x=4;		y=4;
 	drawBlock(y,x);
 	drawBlankBlock(y,x);
-
+```
+The first part of this infinite loop polls for button presses. If it finds one, it will move the x,y cursor in the appropriate direction and declare that a button has been pressed. `SW3` toggles the color with an `xor` command.
+```
 	while(1) {
 
 			if (UP_BUTTON == 0) {
@@ -80,17 +88,20 @@ void main() {
 				button_press = TRUE;
 			} else if (AUX_BUTTON == 0) {
 				while(AUX_BUTTON == 0);
-				color=color ^ 1;
+				color=color ^ 1; // toggles color
 			}
+			```
+If we see that a button has been pressed, we will write a block at the new cursor location. Whether the block is black or white depends on the value of `color`, which is toggled earlier by `SW3`. We continue looping this infinitely.
+			```
 			if (button_press) {
 				button_press = FALSE;
 				//clearDisplay();
 				if (color==1)
 				{
-	                drawBlock(y,x);
+	                	drawBlock(y,x);
 				} else
 				{
-	                drawBlankBlock(y,x);
+	                	drawBlankBlock(y,x);
 				}
 			}
 		}
