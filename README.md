@@ -255,11 +255,13 @@ B functionality is required for A functionality to work. Therefore, if A functio
 ## Observations and Conclusion
 #### Observations
 
-* If a single step in SPI is messed up, the whole thing will not work.
-* Outputting data is not as simple as writing to a port.
-
+* Reusing previous .c and .h files can make coding faster and modular.
+* Writing fine values onto a screen is difficult.
+* Structures and fun and easy to use. They enable a group of information to be stored in an organized manner.
 
 #### Conclusion
+
+The etch-a-sketch and pong funcitons worked according to specs. Army is fully prepared to beat Air Force next week.
 
 ## Documentation
 
