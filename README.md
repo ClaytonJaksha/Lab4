@@ -151,12 +151,15 @@ The code works!
 ##### A Functionality
 ###### We see that the ball moves through the screen, a big wall is on the right, and the paddle is on the left.
 ![alt text](http://i.imgur.com/z7bVnnp.jpg "It's a bird! It's a plane!")
-###### We see that the ball bounced off of the top and the paddle moved downward, two important parts of A functionality.^(it looks like the paddle will miss the ball though!)
+###### We see that the ball bounced off of the top and the paddle moved downward, two important parts of A functionality. (It looks like the paddle will miss the ball though!)
 ![alt text](http://i.imgur.com/BTUGl2Z.jpg "It's PONG!!!")
 ##### Bonus Functionality
-![alt text](http://coloradosportsreport.com/wp-content/uploads/2014/09/8157971746_51767b4c1d.jpg "GO ARMY, BEAT AIR FORCE")
-![alt text](http://coloradosportsreport.com/wp-content/uploads/2014/09/8157971746_51767b4c1d.jpg "GO ARMY, BEAT AIR FORCE")
-![alt text](http://coloradosportsreport.com/wp-content/uploads/2014/09/8157971746_51767b4c1d.jpg "GO ARMY, BEAT AIR FORCE")
+###### Here we see the "GO" functionality. When `SW3` is pressed mid-game, the display looks like it would below as long as the button is held.
+![alt text](http://i.imgur.com/JOMXSLg.jpg "GO ARMY")
+###### After `SW3` is released, the display switches from "GO" to "ARMY" and then delays for a short period (in order to give the user time to let the message sink in).
+![alt text](http://i.imgur.com/5DsCJyo.jpg "BEAT AIR FORCE")
+###### If the user loses the game (by missing the ball with the paddle), the Army A will flash on the screen, asserting its dominance over the user.
+![alt text](http://i.imgur.com/DbWHULP.jpg "BEAT NAVY!!!")
 
 ## Observations and Conclusion
 #### Observations
