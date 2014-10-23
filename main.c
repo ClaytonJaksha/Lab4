@@ -1,3 +1,10 @@
+/*
+* main.c
+* Author: CDT CLAYTON JAKSHA
+* Date: 21 Oct 2014
+* Description: makes the Pong game on your display
+*/
+
 #include <msp430g2553.h>
 #include "pong.h"
 
