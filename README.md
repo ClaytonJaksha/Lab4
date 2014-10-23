@@ -90,9 +90,9 @@ The first part of this infinite loop polls for button presses. If it finds one, 
 				while(AUX_BUTTON == 0);
 				color=color ^ 1; // toggles color
 			}
-			```
+```
 If we see that a button has been pressed, we will write a block at the new cursor location. Whether the block is black or white depends on the value of `color`, which is toggled earlier by `SW3`. We continue looping this infinitely.
-			```
+```
 			if (button_press) {
 				button_press = FALSE;
 				//clearDisplay();
