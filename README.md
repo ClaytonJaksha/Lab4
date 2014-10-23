@@ -222,7 +222,10 @@ At some point, it goes so fast that one can hardly react, for this reason we hav
 #### Results
 The code works!
 ##### Basic Functionality
-
+###### I drew this spiral-looking-thing by just moving my cursors around... like an etch-a-sketch!
+![alt text](http://i.imgur.com/FkbkF9i.jpg "BEAT NAVY!!!")
+###### By pressing `SW3`, I toggled to the erase mode and marched diagonally from the bottom-right to the top-left of the screen, leaving a trail of destruction behind me.
+![alt text](http://i.imgur.com/580j6ZV.jpg "BEAT NAVY!!!")
 ##### B Functionality
 
 ##### A Functionality
