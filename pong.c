@@ -1,8 +1,8 @@
 /*
  * pong.c
  * Author: CDT CLAYTON JAKSHA
- * Date: 10 Oct 2014
- * Description: Defines the functions (all nested within moveBall) that are necessary to
+ * Date: 21 Oct 2014
+ * Description: Defines the functions (most nested within moveBall) that are necessary to
  *              make the pong game ball movement and bouncing functional.
  */
 #include "pong.h"
@@ -18,7 +18,7 @@ ball_t createBall(int xPos, int yPos, int xVel, int yVel, unsigned char radius)
     newBall.radius=radius;
     return newBall;
 }
-
+//creates paddle structure. Arguments passed onto paddle.
 paddle_t createPaddle(int yPos, int radius)
 {
     paddle_t newPaddle;
@@ -136,4 +136,132 @@ unsigned char collisionDetectRight(ball_t ball)
             collbit=FALSE;
             return collbit;
         }
+}
+// draws the word "GO" onto the display
+void drawGo(unsigned long i, unsigned char j){
+	                for (j=1;j<7;j++){
+	                    drawBlock(j,0);
+	                }
+	                for (j=1;j<7;j++){
+	                    drawBlock(j,6);
+	                }
+	                for (j=1;j<7;j++){
+	                    drawBlock(j,10);
+	                }
+	                for (j=1;j<4;j++){
+	                    drawBlock(7,j);
+	                }
+	                for (j=7;j<10;j++){
+	                    drawBlock(7,j);
+	                }
+	                for (j=1;j<4;j++){
+	                    drawBlock(0,j);
+	                }
+	                for (j=7;j<10;j++){
+	                    drawBlock(0,j);
+	                }
+	                for (j=5;j<8;j++){
+	                    drawBlock(j,3);
+	                }
+	                for (j=2;j<5;j++){
+	                    drawBlock(5,j);
+	                }
+	            }
+	            
+// draws the word "ARMY" on the screen
+void drawArmy(unsigned long i, unsigned char j){
+	            j=0;
+	            drawBlock(j,1);
+	            drawBlock(j,4);
+	            drawBlock(j,5);
+	            drawBlock(j,6);
+	            j=1;
+	            drawBlock(j,0);
+	            drawBlock(j,2);
+	            drawBlock(j,4);
+	            drawBlock(j,6);
+	            j=2;
+	            drawBlock(j,0);
+	            drawBlock(j,1);
+	            drawBlock(j,2);
+	            drawBlock(j,4);
+	            drawBlock(j,5);
+	            j=3;
+	            drawBlock(j,0);
+	            drawBlock(j,2);
+	            drawBlock(j,4);
+	            drawBlock(j,6);
+	            j=5;
+	            drawBlock(j,3);
+	            drawBlock(j,5);
+	            drawBlock(j,8);
+	            drawBlock(j,10);
+	            for (j=6;j<8;j++)
+	            {
+	            drawBlock(j,2);
+	            drawBlock(j,4);
+	            drawBlock(j,6);
+	            drawBlock(j,9);
+	            }
+	            for (i=0; i<2000000; i++);
+	}
+//draws the Army A on the screen
+void drawArmyA(unsigned char j)
+{
+				j=0;
+	            drawBlock(j,2);
+	            drawBlock(j,3);
+	            drawBlock(j,4);
+	            drawBlock(j,5);
+	            drawBlock(j,6);
+	            drawBlock(j,7);
+	            j=1;
+	            drawBlock(j,3);
+	            drawBlock(j,4);
+	            drawBlock(j,5);
+	            drawBlock(j,6);
+	            drawBlock(j,7);
+	            j=2;
+	            drawBlock(j,4);
+	            drawBlock(j,6);
+	            drawBlock(j,7);
+	            drawBlock(j,8);
+	            j=3;
+	            drawBlock(j,3);
+	            drawBlock(j,4);
+	            drawBlock(j,7);
+	            drawBlock(j,8);
+	            j=4;
+	            drawBlock(j,2);
+	            drawBlock(j,3);
+	            drawBlock(j,4);
+	            drawBlock(j,5);
+	            drawBlock(j,6);
+	            drawBlock(j,7);
+	            drawBlock(j,8);
+	            drawBlock(j,9);
+	            j=5;
+	            drawBlock(j,2);
+	            drawBlock(j,3);
+	            drawBlock(j,4);
+	            drawBlock(j,5);
+	            drawBlock(j,6);
+	            drawBlock(j,7);
+	            drawBlock(j,8);
+	            drawBlock(j,9);
+	            j=6;
+	            drawBlock(j,1);
+	            drawBlock(j,2);
+	            drawBlock(j,3);
+	            drawBlock(j,7);
+	            drawBlock(j,8);
+	            drawBlock(j,9);
+	            drawBlock(j,10);
+	            j=7;
+	            drawBlock(j,0);
+	            drawBlock(j,1);
+	            drawBlock(j,2);
+	            drawBlock(j,8);
+	            drawBlock(j,9);
+	            drawBlock(j,10);
 }
