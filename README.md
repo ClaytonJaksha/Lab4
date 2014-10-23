@@ -176,4 +176,4 @@ None
 
 
 # GO ARMY, BEAT AIR FORCE
-![alt text](http://coloradosportsreport.com/wp-content/uploads/2014/09/8157971746_51767b4c1d.jpg "GO ARMY, BEAT AIR FORCE")
+![alt text](http://usarmy.vo.llnwd.net/e2/c/images/2011/11/07/226002/size0.jpg "GO ARMY, BEAT AIR FORCE")
