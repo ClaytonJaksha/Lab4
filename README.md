@@ -1,4 +1,4 @@
-Lab 3
+Lab 4
 ====
 #### Clayton Jaksha | ECE 382 | Dr. York | M2A
 
@@ -149,9 +149,9 @@ The code works!
 ##### B Functionality
 
 ##### A Functionality
-####### We see that the ball moves through the screen, a big wall is on the right, and the paddle is on the left.
+###### We see that the ball moves through the screen, a big wall is on the right, and the paddle is on the left.
 ![alt text](http://i.imgur.com/z7bVnnp.jpg "It's a bird! It's a plane!")
-####### We see that the ball bounced off of the top and the paddle moved downward, two important parts of A functionality. ^(it looks like the paddle will miss the ball though!)
+###### We see that the ball bounced off of the top and the paddle moved downward, two important parts of A functionality.^(it looks like the paddle will miss the ball though!)
 ![alt text](http://i.imgur.com/BTUGl2Z.jpg "It's PONG!!!")
 ##### Bonus Functionality
 ![alt text](http://coloradosportsreport.com/wp-content/uploads/2014/09/8157971746_51767b4c1d.jpg "GO ARMY, BEAT AIR FORCE")
