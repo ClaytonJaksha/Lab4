@@ -31,8 +31,9 @@ void main() {
     drawBlock(myBall.position.y,myBall.position.x);
     myPaddle=createPaddle(SCREEN_HEIGHT/2,1);
 
+This loop does the bulk of the work for Pong gameplay. It first polls SW5 (the up button) and SW4 (the down button) to see if they're pressed. Depending on which is pressed, it will move the paddle in the corresponding direction. If SW3 is pressed, it will do the whole "GO ARMY" thing on the screen. m is the ever decreasing amount of delay; the delay goes down by 1000 every cycle. This causes the ball movement to speed up significantly as the game progresses.
 
-
+//If the user misses the ball with their paddle, it breaks from the loop, getting trapped in while(1) and displaying the Army A.
 
     while (m > MIN_DELAY)
     {
