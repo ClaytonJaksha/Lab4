@@ -238,7 +238,7 @@ The code works!
 ###### By pressing `SW3`, I toggled to the erase mode and marched diagonally from the bottom-right to the top-left of the screen, leaving a trail of destruction behind me.
 ![alt text](http://i.imgur.com/580j6ZV.jpg "BEAT NAVY!!!")
 ##### B Functionality
-
+B functionality is required for A functionality to work. Therefore, if A functionality works, B functionality must also work. I demonstrate A functionality below.
 ##### A Functionality
 ###### We see that the ball moves through the screen, a big wall is on the right, and the paddle is on the left.
 ![alt text](http://i.imgur.com/z7bVnnp.jpg "It's a bird! It's a plane!")
