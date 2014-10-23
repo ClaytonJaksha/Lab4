@@ -1,5 +1,6 @@
 #include <msp430g2553.h>
 
+//define functions from nokia_basic.asm
 extern void init();
 extern void initNokia();
 extern void clearDisplay();
@@ -25,7 +26,7 @@ void main() {
 	WDTCTL=WDTPW+WDTHOLD; /* stop WD */
 	button_press = FALSE;
 
-
+	// initialize screen display
 	init();
 	initNokia();
 	clearDisplay();
@@ -34,7 +35,7 @@ void main() {
 	drawBlankBlock(y,x);
 
 	while(1) {
-
+			//these conditionals check for button presses and then move the cursor
 			if (UP_BUTTON == 0) {
 				while(UP_BUTTON == 0);
 				if (y>=1) y=y-1;
@@ -55,15 +56,16 @@ void main() {
 				while(AUX_BUTTON == 0);
 				color=color ^ 1;
 			}
+			//draws the block if it needs to be drawn
 			if (button_press) {
 				button_press = FALSE;
 				//clearDisplay();
 				if (color==1)
 				{
-	                drawBlock(y,x);
+	                	drawBlock(y,x);
 				} else
 				{
-	                drawBlankBlock(y,x);
+	                	drawBlankBlock(y,x);
 				}
 			}
 		}
