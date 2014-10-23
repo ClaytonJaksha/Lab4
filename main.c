@@ -17,12 +17,13 @@ unsigned char j = 0;
 
 void main() {
 
-    ball_t myBall={{SCREEN_WIDTH/2,SCREEN_HEIGHT/2},{INIT_VELOC_X,INIT_VELOC_Y},0}; //initialize the ball's position in the middle of the screen with a velocity of (8,5) and a radius of 3
+    ball_t myBall={{SCREEN_WIDTH/2,SCREEN_HEIGHT/2},{INIT_VELOC_X,INIT_VELOC_Y},0}; //initialize the ball's position in the middle of the screen with a velocity of (1,1)
     paddle_t myPaddle={4,5,3,1};
     unsigned long n = 0;
     IFG1=0; /* clear interrupt flag1 */
     WDTCTL=WDTPW+WDTHOLD; /* stop WD */
 
+//This portion of the code calls some of the assembly funcitons defined in nokia.asm to initalize the display, clear the display, and then it draws our block in the middle of the screen and actually initializes our paddle on the far left of the screen.
 
     init();
     initNokia();
