@@ -13,7 +13,7 @@ unsigned long i = 0;
 unsigned char j = 0;
 
 
-
+//This is the beginning of the main() loop, where the Pong program will run from. We initialize our ball (well, really, it's a block) structure in the middle of the screen with a predefined velocity. Also we initialize our paddle with random values (they will be overwritten as the program further initializes). We also define some counters, stop the watchdog timer, and we're good to go!
 
 void main() {
 
