@@ -370,18 +370,18 @@ loopdB:
     ret                         ; return whence you came
 
 
-            ;-------------------------------------------------------------------------------
-            ;   Name:       drawLine
-            ;   Inputs:     R12 row to draw line
-            ;               R13 column to draw line
-            ;   Outputs:    none
-            ;   Purpose:    draw an 1x8 line of black pixels at screeen cordinates 8*row,8*col
-            ;               The display screen, for the purposes of this routine, is divided
-            ;               into 8x8 blocks.  Consequently the codinate system, for the purposes
-            ;               of this routine, start in the upper left of the screen @ (0,0) and
-            ;               end @ (11,7) in the lower right of the display.
-            ;   Registers:  R5  column counter to draw all 8 pixel columns
-            ;-------------------------------------------------------------------------------
+;-------------------------------------------------------------------------------
+;   Name:       drawLine
+;   Inputs:     R12 row to draw line
+;               R13 column to draw line
+;   Outputs:    none
+;   Purpose:    draw an 1x8 line of black pixels at screeen cordinates 8*row,8*col
+;               The display screen, for the purposes of this routine, is divided
+;               into 8x8 blocks.  Consequently the codinate system, for the purposes
+;               of this routine, start in the upper left of the screen @ (0,0) and
+;               end @ (11,7) in the lower right of the display.
+;   Registers:  R5  column counter to draw all 8 pixel columns
+;-------------------------------------------------------------------------------
 drawLine:
                 push    R5
                 push    R12
