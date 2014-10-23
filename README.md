@@ -22,7 +22,7 @@ Design for this lab consisted only of planning to remove the `clearDisplay()` fu
 I designed this code by continuously checking the ball structure's position against the boundary of the screen and then changing (or maintaining) the velocity to suit that particular case. Futhermore, I added a paddle structure and edited the function which checks for a bounce against the left screen so a bounce would only register if it hit the location of the paddle. After meeting "A" functionality, I built some ARMY spirit into my design. If, during normal gameplay, the user presses `SW3`, the screen will flash the word "GO". Upon release, it displays "ARMY" and, after some delay, will return the user to gameplay. Futhermore, if the user loses, it will display the [Army A](http://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Army_A.svg/661px-Army_A.svg.png) on the screen. These are accomplished by polling the buttons each time the ball moves. Additionally, the ball's speed increases with time (i.e. the delay decreases over time).
 
 ## Code Walkthrough
-We need to first include our microprocessor's library and the header file `pong.h` in order to include the functions we will reference in the `main()` loop. Also, we will declare and define the global variables `m`,`i`,`j` since they are used in all parts of the code.
+
 #### Etch-A-Sketch
 This first portion calls the MSP430 library and declares the functions found in `nokia_basic.asm`. Then it goes on to declare constants that wil be useful throughout the code.
 ```
@@ -108,6 +108,7 @@ If we see that a button has been pressed, we will write a block at the new curso
 }
 ```
 #### Pong
+We need to first include our microprocessor's library and the header file `pong.h` in order to include the functions we will reference in the `main()` loop. Also, we will declare and define the global variables `m`,`i`,`j` since they are used in all parts of the code.
 ```
 #include <msp430g2553.h>
 #include "pong.h"
